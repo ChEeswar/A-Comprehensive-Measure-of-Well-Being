@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Development Index Predictor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                        url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #ff6b35;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+            font-weight: bold;
+            text-align: center;
+        }
+        .form-container {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 550px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #00b4d8;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .input-group input:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ff6b35;
+            box-shadow: 0 0 15px rgba(255, 107, 53, 0.4);
+        }
+        .input-group input::placeholder {
+            color: #a0aec0;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0, 180, 216, 0.4);
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #ff6b35, #e65c23);
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Human Development Index</h1>
+
+    <div class="form-container">
+        <form action="/predict" method="POST">
+            <div class="input-group">
+                <input type="number" name="Country" placeholder="Enter Country ID" required>
+            </div>
+            <div class="input-group">
+                <input type="number" step="any" name="Life_Expectancy" placeholder="Enter Life Expectancy (range: 20-85)" required>
+            </div>
+            <div class="input-group">
+                <input type="number" step="any" name="Mean_Years_of_Schooling" placeholder="Enter Mean Years of Schooling (range: 0-15)" required>
+            </div>
+            <div class="input-group">
+                <input type="number" step="any" name="GNI_Per_Capita" placeholder="Enter GNI (range: 400-110000)" required>
+            </div>
+            <button type="submit" class="submit-btn">Prediction</button>
+        </form>
+    </div>
+
+</body>
+</html>
