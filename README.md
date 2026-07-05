@@ -56,7 +56,7 @@ ML - 0027 - Human Development Index/
 
 ## ⚙️ Installation & Local Setup
 
-# 1. Initialize the Environment
+## 1. Initialize the Environment
 
 
 Open your local terminal and navigate to your working directory:
@@ -65,7 +65,7 @@ Open your local terminal and navigate to your working directory:
 cd "path/to/ML - 0027 - Human Development Index"
 
 
-# 2. Install Required Frameworks
+## 2. Install Required Frameworks
 
    
 Install the necessary computational packages and web hosting extensions using pip:
@@ -76,7 +76,7 @@ Bash
 pip install flask scikit-learn pandas numpy pyopenssl
 
 
-# 3. Launch the Predictive Engine
+## 3. Launch the Predictive Engine
 
    
 Run the primary script execution layer to spin up the local microservices thread:
